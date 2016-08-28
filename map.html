@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>map</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<style>
+		#container{width: 800px;height: 600px;margin: 0 auto;border:1px solid red;}
+	</style>
+</head>
+<body>
+	<div id="container"  class="map-container"></div>
+	<script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=R5UBZ-NEBKU-ANAVU-4BDH2-SGZKO-HSBPI"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+
+	//直接加载地图
+
+
+    //初始化地图函数  自定义函数名init
+    	function init() {
+    		  var center = new qq.maps.LatLng(39.916527,116.397128);
+    //定义map变量 调用 qq.maps.Map() 构造函数   获取地图显示容器
+        var map = new qq.maps.Map(document.getElementById("container"), {
+            center: center,      // 地图的中心地理坐标。
+            zoom:8                                                 // 地图的中心地理坐标。
+            
+        });
+    //圆形标注
+     // var marker = new qq.maps.Marker({
+     // 	position: center,
+     //    	map: map
+    	//});
+	//文本标注
+		var label = new qq.maps.Label({
+        	position: center,
+       		map: map,
+        	content:'文本标注'
+    	});
+    }
+
+    //调用初始化函数地图
+    init();
+
+
+
+
+}
+	</script>
+</body>
+</html>
+
+
