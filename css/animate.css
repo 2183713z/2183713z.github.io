@@ -1,0 +1,65 @@
+@keyframes music{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+@-webkit-keyframes music{
+	0%{
+		-webkit-transform:rotate(0deg);
+	}
+	100%{
+		-webkit-transform:rotate(360deg);
+	}
+}
+@keyframes arrow{
+	0%{
+		opacity: 0;
+		/*bottom: 6px;*/
+		-webkit-transform:translateY(0);
+	}
+	50%{
+		opacity: 1;
+		/*bottom: 20px;*/
+		transform:translateY(-20px);
+		-webkit-transform:translateY(-20px);
+	}
+	100%{
+		opacity: 0;
+		/*bottom: 40px;*/
+		-webkit-transform:translateY(-40px);
+	}
+}
+@-webkit-keyframes arrow{
+	0%{
+		opacity: 0;
+		bottom: 6px;
+	}
+	50%{
+		opacity: 1;
+		bottom: 20px;
+	}
+	100%{
+		opacity: 0;
+		bottom: 40px;
+	}
+}
+@keyframes fadeInLeft{
+	0%{
+		transform:translateX(-150%);
+		opacity:0;
+	}
+	100%{
+		transform:translateX(-0%);
+		opacity:1;
+	}
+}
+.animated{animation-duration:1.2s;animation-timing-function:linear;}
+.arrow-animate{animation-name:arrow;}
+.music-animate{animation-name:music;}
+.infinite{animation-iteration-count:infinite;}
+.fadeInLeft{animation-name:fadeInLeft;animation-duration:0.5s;}
+.fadeInRight{animation-name:fadeInRight;animation-duration:0.5s;}
+.fadeInTop{animation-name:fadeInTop;animation-duration:0.5s;}
